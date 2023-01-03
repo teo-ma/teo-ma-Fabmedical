@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: teomateomafabmedical 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: teomateomafabmedical
+  template:
+    metadata:
+      labels:
+        app: teomateomafabmedical 
+    spec:
+      containers:
+        - name: teomateomafabmedical 
+          image: fabmedicalteo.azurecr.io/teomateomafabmedical
+          ports:
+          - containerPort: 3001
